@@ -6,7 +6,7 @@ const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
   return (
     <div className="aipicker-container">
       <textarea
-        placeholder="Poți personaliza design-ul folosind bara de instrumente de mai sus. De asemenea, poți încărca o imagine pentru a fi pusă pe tricou ca logo sau textură."
+        placeholder="Poți personaliza design-ul folosind bara de instrumente de mai sus. De asemenea, poți încărca o imagine pentru a fi pusă pe tricou ca logo sau textură. Poti folosi caracterele 'A' si 'D' pentru a roti tricoul."
         rows={5}
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
