@@ -24,6 +24,23 @@ const Customizer = () => {
     stylishShirt: false,
   })
 
+  const minRotationY = -Math.PI / 4; // -45 degrees
+  const maxRotationY = Math.PI / 4; // 45 degrees
+////////////////////////////////////////////////////////////////////////////////////////
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+  const handleKeyDown = (e) => {
+    if ((e.key === 'A' || e.key === 'a') && state.rotation.y<maxRotationY) {
+      state.rotation.y += 0.1;
+    } else if ((e.key === 'D' || e.key === 'd')  && state.rotation.y>minRotationY) {
+      state.rotation.y -= 0.1;
+    }
+  };
+////////////////////////////////////////////////////////////////////////////////////////
   // show tab content depending on the activeTab
   const generateTabContent = () => {
     switch (activeEditorTab) {

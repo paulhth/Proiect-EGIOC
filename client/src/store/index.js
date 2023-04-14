@@ -7,6 +7,7 @@ const state = proxy({
     isFullTexture: false, //are we using a texture or a color for the background
     logoDecal: './threejs.png', //default logo texture
     fullDecal: './threejs.png', //default background texture
+    rotation: { x: 0, y: 0, z: 0 }, // t-shirt rotation
 });
 
 export default state;
